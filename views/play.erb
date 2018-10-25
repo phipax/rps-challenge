@@ -1,0 +1,28 @@
+<html>
+ <head><title>Welcome to Rock, Paper & Scissors Game!</title>
+   <h1 style="color:white;">"Play!"</h1>
+ </head>
+
+<body bgcolor=#000000 style="text-align:center;">
+
+  <table width="25%" align="center">
+    <tr>
+      <td width="50%" style="color:white;"><%=@hp.p1%> choose</td>
+      <td width="50%" style="color:white;"><%=@hp.selection[@hp.p1]%></td>
+      <td width="50%" style="color:white;"><%=@hp.p2%> choose</td>
+      <td width="50%" style="color:white;"><%=@hp.selection[@hp.p2]%></td>
+      </td>
+    </tr>
+    <tr>
+      <td width="50%">
+          <form action='/redir' method="post"><input type="submit" value="Play 1"></form>
+      </td>
+      <td width="50%">&nbsp;</td>
+      <td width="50%">
+          <form action='/redir' method="post"><input type="submit" value="Play 2"></form>
+      </td>
+    </tr>
+    <tr><td></td><td width="50%" style="color:white;"><%=@hp.decision%></td><td></td></tr>
+  </table>
+
+</html>

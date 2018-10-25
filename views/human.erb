@@ -1,0 +1,61 @@
+<html>
+ <head><title>Welcome to Rock, Paper & Scissors Game!</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing:border-box;
+}
+
+.left {
+  background-color:#2196F3;
+  padding:20px;
+  float:left;
+  width:20%; /* The width is 20%, by default */
+}
+
+.main {
+  background-color:#f1f1f1;
+  padding:20px;
+  float:left;
+  width:60%; /* The width is 60%, by default */
+}
+
+.right {
+  background-color:#4CAF50;
+  padding:20px;
+  float:left;
+  width:20%; /* The width is 20%, by default */
+}
+@media screen and (max-width:800px) {
+  .left, .main, .right {
+    width:100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
+</style>
+</head>
+<body align="center" >
+   <div style="background-color:black;align-items:center;color:white;"> <h1 style="font-size:5vw"> Playing against another human</h1></div>
+
+<form action='/human-play' method="post">
+  <div style="background-color:black;">
+  <table width="25%" align="center">
+    <th align="left">
+      <div style="background-color:black;text-align:center;color:white;">
+        Fill </div></th>
+    <tr>
+      <td width="50%"><div style="background-color:black;text-align:center;color:yellow;">Player 1 Name:</div></td>
+      <td width="50%"><input type="text" name="p1"></td>
+    </tr>
+
+    <tr>
+      <td width="50%"><div style="background-color:black;text-align:center;color:yellow;">Player 2 Name:</div></td>
+      <td width="50%"><input type="text" name="p2"></td>
+
+    </tr>
+
+    <tr align="center"><td>
+      <input type="submit" value="Start!"></form></td><td><form action="/" method="get"><input type="submit" value="Back!"></td></tr>
+  </table>
+</div>
+</form>
+</html>
